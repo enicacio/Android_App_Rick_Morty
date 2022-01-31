@@ -16,6 +16,6 @@ interface RickMorthAPI {
 
     @GET("character/{id}")
     fun getCharacterById(
-        @Path("id") id: String
+        @Path("id") id: Int
     ): Call<CharactersRequest>
 }

@@ -16,6 +16,7 @@ import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.koin.java.KoinJavaComponent.inject
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -24,8 +25,11 @@ class CharactersList : Activity(), View.OnClickListener {
 
     lateinit var binding: ListagemBinding
     lateinit var adapter: CharactersAdapter
+
     var page = 1
     var carregando = false
+    val serviceAPI: RickMorthAPI by inject(RickMorthAPI::class.java)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,18 +68,11 @@ class CharactersList : Activity(), View.OnClickListener {
     }
 
     private fun carregarPersonagens() {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://rickandmortyapi.com/api/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        val service: RickMorthAPI = retrofit.create(RickMorthAPI::class.java)
-
-        binding.progressBar.visibility = View.VISIBLE
-
+        binding.progressBar.visibility = View.VISIBLE //imagem loading
+        carregando = true
 
         GlobalScope.launch(IO) {
-            val call = service.listCharacters(page).execute()
+            val call = serviceAPI.listCharacters(page).execute()
             val list = call.body()?.results
 
             withContext(Main) {
@@ -84,6 +81,7 @@ class CharactersList : Activity(), View.OnClickListener {
                     page++
                 }
             }
+            carregando = false
             binding.progressBar.visibility = View.GONE
         }
     }

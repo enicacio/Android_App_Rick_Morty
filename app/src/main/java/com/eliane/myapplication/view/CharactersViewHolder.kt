@@ -4,10 +4,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.eliane.myapplication.databinding.ItemPersonagemBinding
 import com.eliane.myapplication.model.Character
 import com.squareup.picasso.Picasso
+import org.koin.java.KoinJavaComponent.inject
 
 class CharactersViewHolder(val binding: ItemPersonagemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    val imageLoader: Picasso = Picasso.get()
+    private val imageLoader: Picasso by inject(Picasso::class.java)
 
     fun setCharacter(character: Character) {
         imageLoader.load(character.image).into(binding.charImage)

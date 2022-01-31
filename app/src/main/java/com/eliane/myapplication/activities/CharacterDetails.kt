@@ -19,12 +19,13 @@ import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import kotlinx.coroutines.Dispatchers.IO
+import kotlin.properties.Delegates
 
 class CharacterDetails : Activity(), View.OnClickListener {
 
     lateinit var binding: DetailPersonagemBinding
     lateinit var adapter: DetailCharacterAdapter
-    lateinit var id: String
+    var id by Delegates.notNull<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +35,7 @@ class CharacterDetails : Activity(), View.OnClickListener {
         // Pegando a informação da intent criada
         var message = intent.getStringExtra("character id")
         if (message != null) {
-            id = message
+            id = message.toInt()
         } else {
             Log.d("CharacterDetail", "FALHA ao carregar o message")
         }

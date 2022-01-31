@@ -1,8 +1,6 @@
 package com.eliane.myapplication.view
 
-import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
-import com.eliane.myapplication.databinding.DetailPersonagemBinding
 import com.eliane.myapplication.databinding.PersonagemBinding
 import com.eliane.myapplication.model.Character
 import com.squareup.picasso.Picasso
