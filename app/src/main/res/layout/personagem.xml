@@ -131,11 +131,12 @@
         android:id="@+id/button_voltar"
         android:layout_width="85dp"
         android:layout_height="48dp"
+        android:layout_marginTop="72dp"
         android:background="#00FA9A"
         android:text="Voltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="563dp" />
+        app:layout_constraintTop_toBottomOf="@+id/char_location_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
