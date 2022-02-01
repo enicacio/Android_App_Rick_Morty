@@ -1,7 +1,10 @@
 package com.eliane.myapplication.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Character(
     @SerializedName("id") val id: Int,
     @SerializedName("name") val name: String,
@@ -10,14 +13,8 @@ data class Character(
     @SerializedName("type") val type: String,
     @SerializedName("gender") val gender: String,
     @SerializedName("origin") val origin: Origin,
-        // val name: String,
-        // val url: String
     @SerializedName("location") val location: Location,
-        // val name: String,
-        // val url: String
     @SerializedName("image") val image: String,
     @SerializedName("url") val url: String,
-    //val created: Date,
 
-
-)
+) : Parcelable

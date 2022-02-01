@@ -19,6 +19,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import kotlinx.coroutines.Dispatchers.IO
+import org.koin.java.KoinJavaComponent
 import kotlin.properties.Delegates
 
 class CharacterDetails : Activity(), View.OnClickListener {
@@ -26,19 +27,22 @@ class CharacterDetails : Activity(), View.OnClickListener {
     lateinit var binding: DetailPersonagemBinding
     lateinit var adapter: DetailCharacterAdapter
     var id by Delegates.notNull<Int>()
+    val serviceAPI: RickMorthAPI by KoinJavaComponent.inject(RickMorthAPI::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DetailPersonagemBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         // Pegando a informação da intent criada
-        var message = intent.getStringExtra("character id")
+        val message = intent.getStringExtra("character id")
         if (message != null) {
             id = message.toInt()
         } else {
             Log.d("CharacterDetail", "FALHA ao carregar o message")
         }
+
+        binding = DetailPersonagemBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         initList()
         carregarPersonagem()
 
@@ -57,15 +61,9 @@ class CharacterDetails : Activity(), View.OnClickListener {
     }
 
     private fun carregarPersonagem() {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://rickandmortyapi.com/api/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        val service: RickMorthAPI = retrofit.create(RickMorthAPI::class.java)
 
         GlobalScope.launch(IO) {
-            val call = service.getCharacterById(id).execute()
+            val call = serviceAPI.getCharacterById(id).execute()
             val detail = call.body()?.detailCharacter
 
             withContext(Main) {

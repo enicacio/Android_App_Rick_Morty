@@ -1,4 +1,4 @@
-package com.eliane.myapplication
+package com.eliane.myapplication.model
 
 data class Pagination(
     val count: Int,
