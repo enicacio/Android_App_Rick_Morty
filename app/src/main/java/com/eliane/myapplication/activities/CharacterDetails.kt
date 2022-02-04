@@ -7,37 +7,39 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import com.eliane.myapplication.R
-import com.eliane.myapplication.adapters.CharactersAdapter
 import com.eliane.myapplication.adapters.DetailCharacterAdapter
 import com.eliane.myapplication.api.RickMorthAPI
 import com.eliane.myapplication.databinding.DetailPersonagemBinding
-import com.eliane.myapplication.databinding.PersonagemBinding
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import kotlinx.coroutines.Dispatchers.IO
-import org.koin.java.KoinJavaComponent
-import kotlin.properties.Delegates
+import org.koin.java.KoinJavaComponent.inject
+
 
 class CharacterDetails : Activity(), View.OnClickListener {
 
     lateinit var binding: DetailPersonagemBinding
     lateinit var adapter: DetailCharacterAdapter
-    var id by Delegates.notNull<Int>()
-    val serviceAPI: RickMorthAPI by KoinJavaComponent.inject(RickMorthAPI::class.java)
+
+    var id = 1
+    val serviceAPI: RickMorthAPI by inject(RickMorthAPI::class.java)
+
+    companion object {
+        const val EXTRA_MESSAGE = "character-id"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Pegando a informação da intent criada
-        val message = intent.getStringExtra("character id")
+        val message = intent.getStringExtra(EXTRA_MESSAGE)
         if (message != null) {
             id = message.toInt()
         } else {
             Log.d("CharacterDetail", "FALHA ao carregar o message")
+            finish()
         }
 
         binding = DetailPersonagemBinding.inflate(layoutInflater)

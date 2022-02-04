@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.eliane.myapplication.R
+import com.eliane.myapplication.activities.CharacterDetails.Companion.EXTRA_MESSAGE
 import com.eliane.myapplication.adapters.CharactersAdapter
 import com.eliane.myapplication.api.RickMorthAPI
 import com.eliane.myapplication.databinding.ListagemBinding
@@ -17,11 +18,9 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.java.KoinJavaComponent.inject
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 
-class CharactersList : Activity(), View.OnClickListener {
+class CharactersList : Activity(), View.OnClickListener{
 
     lateinit var binding: ListagemBinding
     lateinit var adapter: CharactersAdapter
@@ -47,7 +46,7 @@ class CharactersList : Activity(), View.OnClickListener {
         var idCharacter = findViewById<TextView>(R.id.char_id)
         var message = idCharacter.text.toString()
         val intent = Intent(this, CharacterDetails::class.java).apply {
-            putExtra("character id", message)
+            putExtra(EXTRA_MESSAGE, message)
         }
         startActivity(intent)
     }

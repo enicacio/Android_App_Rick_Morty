@@ -9,9 +9,11 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/char_image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="166dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,25 +21,24 @@
         android:id="@+id/char_name"
         android:layout_width="219dp"
         android:layout_height="26dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/char_image"
-        tools:text="Nome do Personagem"
-        android:gravity="center_horizontal" />
+        tools:text="Nome do Personagem" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/char_status"
         android:layout_width="219dp"
         android:layout_height="26dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -52,24 +53,23 @@
         android:layout_width="219dp"
         android:layout_height="26dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginEnd="48dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/char_status"
-        tools:text="Espécie"
-        android:gravity="center_horizontal"/>
+        tools:text="Espécie" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/char_type"
         android:layout_width="219dp"
         android:layout_height="26dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -84,8 +84,7 @@
         android:layout_width="219dp"
         android:layout_height="26dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginRight="48dp"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -100,8 +99,7 @@
         android:layout_width="219dp"
         android:layout_height="26dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginRight="48dp"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -116,8 +114,7 @@
         android:layout_width="219dp"
         android:layout_height="26dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginRight="48dp"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -127,16 +124,6 @@
         tools:text="Última localização"
         android:gravity="center_horizontal"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_voltar"
-        android:layout_width="85dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="72dp"
-        android:background="#00FA9A"
-        android:text="Voltar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/char_location_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

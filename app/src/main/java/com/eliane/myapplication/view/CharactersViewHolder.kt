@@ -6,6 +6,7 @@ import com.eliane.myapplication.model.Character
 import com.squareup.picasso.Picasso
 import org.koin.java.KoinJavaComponent.inject
 
+
 class CharactersViewHolder(val binding: ItemPersonagemBinding) : RecyclerView.ViewHolder(binding.root) {
 
     private val imageLoader: Picasso by inject(Picasso::class.java)

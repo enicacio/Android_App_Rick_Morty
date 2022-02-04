@@ -9,7 +9,7 @@ import com.eliane.myapplication.model.Character
 
 class CharactersAdapter(
 
-    val layoutInflater: LayoutInflater
+    val layoutInflater: LayoutInflater,
 
 ): RecyclerView.Adapter<CharactersViewHolder>() {
 
