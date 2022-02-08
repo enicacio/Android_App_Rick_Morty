@@ -4,14 +4,14 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.eliane.myapplication.R
 import com.eliane.myapplication.activities.CharacterDetails.Companion.EXTRA_MESSAGE
 import com.eliane.myapplication.adapters.CharactersAdapter
 import com.eliane.myapplication.api.RickMorthAPI
 import com.eliane.myapplication.databinding.ListagemBinding
+import com.eliane.myapplication.model.Character
+import com.eliane.myapplication.view.onClickCharacterListenner
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.GlobalScope
@@ -20,14 +20,16 @@ import kotlinx.coroutines.withContext
 import org.koin.java.KoinJavaComponent.inject
 
 
-class CharactersList : Activity(), View.OnClickListener{
+class CharactersList : Activity(), onClickCharacterListenner{
 
     lateinit var binding: ListagemBinding
     lateinit var adapter: CharactersAdapter
+    lateinit var character: Character
 
     var page = 1
     var carregando = false
     val serviceAPI: RickMorthAPI by inject(RickMorthAPI::class.java)
+    lateinit var onClickListenner: onClickCharacterListenner
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,22 +39,11 @@ class CharactersList : Activity(), View.OnClickListener{
 
         initList()
         carregarPersonagens()
-
-        // O click no botão aciona o listener
-        findViewById<Button>(R.id.char_button_details)?.setOnClickListener(this)
     }
 
-    override fun onClick(p0: View?) {
-        var idCharacter = findViewById<TextView>(R.id.char_id)
-        var message = idCharacter.text.toString()
-        val intent = Intent(this, CharacterDetails::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
-        }
-        startActivity(intent)
-    }
 
     private fun initList() {
-        adapter = CharactersAdapter(layoutInflater)
+        adapter = CharactersAdapter(layoutInflater, this)
         binding.charsList.adapter = adapter
 
         //Scroller
@@ -67,6 +58,7 @@ class CharactersList : Activity(), View.OnClickListener{
     }
 
     private fun carregarPersonagens() {
+        binding.imageView2.visibility = View.VISIBLE
         binding.progressBar.visibility = View.VISIBLE //imagem loading
         carregando = true
 
@@ -83,5 +75,12 @@ class CharactersList : Activity(), View.OnClickListener{
             carregando = false
             binding.progressBar.visibility = View.GONE
         }
+    }
+
+    override fun onDetailCharacter(character: Character) {
+        val intent = Intent(this, CharacterDetails::class.java).apply {
+            putExtra(EXTRA_MESSAGE, character)
+        }
+        startActivity(intent)
     }
 }

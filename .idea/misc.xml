@@ -3,12 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic__eslfh6.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.20854700854700856" />
+        <entry key="app/src/main/res/drawable-v24/ic_rick_and_morty_logo.xml" value="0.20854700854700856" />
+        <entry key="app/src/main/res/drawable/ic__eslfh6.xml" value="0.20854700854700856" />
+        <entry key="app/src/main/res/drawable/ic_bloco_personagem.xml" value="0.20854700854700856" />
+        <entry key="app/src/main/res/drawable/ic_blocos_detalhes.xml" value="0.3217948717948718" />
+        <entry key="app/src/main/res/drawable/ic_endless_constellation__1_.xml" value="0.20854700854700856" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2059071729957806" />
+        <entry key="app/src/main/res/drawable/ic_layout_character.xml" value="0.18547008547008548" />
+        <entry key="app/src/main/res/drawable/ic_layout_image.xml" value="0.20854700854700856" />
+        <entry key="app/src/main/res/drawable/ic_layout_personagem.xml" value="0.18547008547008548" />
+        <entry key="app/src/main/res/drawable/ic_layout_teste1.xml" value="0.20854700854700856" />
+        <entry key="app/src/main/res/drawable/ic_rick_and_morty_logo.xml" value="0.20854700854700856" />
+        <entry key="app/src/main/res/drawable/ic_slanted_gradient.xml" value="0.20854700854700856" />
         <entry key="app/src/main/res/drawable/image_rounded_corner.xml" value="0.2546875" />
         <entry key="app/src/main/res/layout/detail_personagem.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/layout/item_personagem.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/listagem.xml" value="0.23854166666666668" />
+        <entry key="app/src/main/res/layout/listagem.xml" value="0.2464171623694052" />
         <entry key="app/src/main/res/layout/main_screen.xml" value="0.25226542111122985" />
-        <entry key="app/src/main/res/layout/personagem.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/personagem.xml" value="0.2251768673292529" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.20854700854700856" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.23802083333333332" />
       </map>
     </option>

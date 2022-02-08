@@ -6,10 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.eliane.myapplication.view.CharactersViewHolder
 import com.eliane.myapplication.databinding.ItemPersonagemBinding
 import com.eliane.myapplication.model.Character
+import com.eliane.myapplication.view.onClickCharacterListenner
 
 class CharactersAdapter(
 
     val layoutInflater: LayoutInflater,
+    val onItemClick: onClickCharacterListenner
 
 ): RecyclerView.Adapter<CharactersViewHolder>() {
 
@@ -22,7 +24,7 @@ class CharactersAdapter(
     }
 
     override fun onBindViewHolder(holder: CharactersViewHolder, position: Int) {
-        holder.setCharacter(listagem[position])
+        holder.setCharacter(listagem[position], onItemClick)
     }
 
     override fun getItemCount(): Int {
