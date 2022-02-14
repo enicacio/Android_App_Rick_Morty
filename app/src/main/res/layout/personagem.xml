@@ -10,36 +10,39 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/char_image"
-        android:layout_width="147dp"
-        android:layout_height="147dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="141dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="124dp"
         android:elevation="2dp"
+        android:background="@drawable/shadow_rect"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/char_name"
-        android:layout_width="97dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="22dp"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
         android:elevation="2dp"
+        android:adjustViewBounds="true"
         android:gravity="center_horizontal"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="19sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_name"
+        app:layout_constraintTop_toBottomOf="@+id/char_image"
         tools:text="Nome" />
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/char_status"
-        android:layout_width="206dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="58dp"
+        android:layout_width="190dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
         android:elevation="2dp"
         android:gravity="center_horizontal"
         android:textAlignment="center"
@@ -47,16 +50,16 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintHorizontal_bias="0.743"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/char_name"
         tools:text="Status" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/char_species"
-        android:layout_width="206dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
         android:elevation="2dp"
         android:gravity="center_horizontal"
         android:textAlignment="center"
@@ -64,17 +67,16 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintHorizontal_bias="0.738"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/char_status"
         tools:text="Espécie" />
 
-
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/char_gender"
-        android:layout_width="206dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
         android:elevation="2dp"
         android:gravity="center_horizontal"
         android:textAlignment="center"
@@ -82,16 +84,16 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintHorizontal_bias="0.738"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/char_species"
         tools:text="Gênero" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/char_origin_name"
-        android:layout_width="204dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="193dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
         android:elevation="2dp"
         android:gravity="center_horizontal"
         android:textAlignment="center"
@@ -99,16 +101,16 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintHorizontal_bias="0.76"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/char_gender"
         tools:text="Origem" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/char_location_name"
-        android:layout_width="252dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="259dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="28dp"
         android:elevation="2dp"
         android:gravity="center_horizontal"
         android:textAlignment="center"
@@ -116,7 +118,6 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/char_origin_name"
         tools:text="Localização" />
@@ -135,15 +136,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/char_origin_name"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/text_origin"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/text_name"
-        android:layout_width="85dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="28dp"
+        android:layout_width="61dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginEnd="232dp"
         android:elevation="2dp"
         android:text="Nome:"
         android:textAlignment="center"
@@ -157,8 +158,8 @@
         android:id="@+id/text_status"
         android:layout_width="61dp"
         android:layout_height="25dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="56dp"
         android:elevation="2dp"
         android:text="Status:"
         android:textColor="@color/grey"
@@ -171,8 +172,8 @@
         android:id="@+id/text_specie"
         android:layout_width="61dp"
         android:layout_height="25dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
         android:text="Espécie:"
         android:textColor="@color/grey"
         android:textSize="16sp"
@@ -185,8 +186,8 @@
         android:id="@+id/text_gender"
         android:layout_width="61dp"
         android:layout_height="25dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
         android:text="Gênero:"
         android:textColor="@color/grey"
         android:textSize="16sp"
@@ -201,8 +202,8 @@
         android:id="@+id/text_origin"
         android:layout_width="61dp"
         android:layout_height="25dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
         android:text="Origem:"
         android:textColor="@color/grey"
         android:textSize="16sp"
@@ -215,26 +216,26 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="74dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="86dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="40dp"
         android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_local"
         app:srcCompat="@mipmap/ic_launcher_foreground" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="393dp"
-        android:layout_height="569dp"
-        android:layout_marginBottom="86dp"
+        android:layout_width="323dp"
+        android:layout_height="665dp"
+        android:layout_marginBottom="20dp"
         android:elevation="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_layout_image" />
+        app:srcCompat="@drawable/ic_novolayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

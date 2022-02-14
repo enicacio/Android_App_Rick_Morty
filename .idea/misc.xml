@@ -15,14 +15,16 @@
         <entry key="app/src/main/res/drawable/ic_layout_image.xml" value="0.20854700854700856" />
         <entry key="app/src/main/res/drawable/ic_layout_personagem.xml" value="0.18547008547008548" />
         <entry key="app/src/main/res/drawable/ic_layout_teste1.xml" value="0.20854700854700856" />
+        <entry key="app/src/main/res/drawable/ic_novolayout.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_rick_and_morty_logo.xml" value="0.20854700854700856" />
         <entry key="app/src/main/res/drawable/ic_slanted_gradient.xml" value="0.20854700854700856" />
         <entry key="app/src/main/res/drawable/image_rounded_corner.xml" value="0.2546875" />
+        <entry key="app/src/main/res/drawable/shadow_rect.xml" value="0.2245" />
         <entry key="app/src/main/res/layout/detail_personagem.xml" value="0.23854166666666668" />
-        <entry key="app/src/main/res/layout/item_personagem.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/listagem.xml" value="0.2464171623694052" />
+        <entry key="app/src/main/res/layout/item_personagem.xml" value="0.2971099853515624" />
+        <entry key="app/src/main/res/layout/listagem.xml" value="0.1475677490234375" />
         <entry key="app/src/main/res/layout/main_screen.xml" value="0.25226542111122985" />
-        <entry key="app/src/main/res/layout/personagem.xml" value="0.2251768673292529" />
+        <entry key="app/src/main/res/layout/personagem.xml" value="0.2232666015625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.20854700854700856" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.23802083333333332" />
       </map>

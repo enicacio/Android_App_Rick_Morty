@@ -24,12 +24,10 @@ class CharactersList : Activity(), onClickCharacterListenner{
 
     lateinit var binding: ListagemBinding
     lateinit var adapter: CharactersAdapter
-    lateinit var character: Character
 
     var page = 1
     var carregando = false
     val serviceAPI: RickMorthAPI by inject(RickMorthAPI::class.java)
-    lateinit var onClickListenner: onClickCharacterListenner
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

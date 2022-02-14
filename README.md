@@ -1,4 +1,5 @@
 <img align="right" src="https://github.com/enicacio/Android_App_Rick_Morty/blob/master/sample.png" width="200">
+<img align="right" src="https://github.com/enicacio/Android_App_Rick_Morty/blob/master/sample1.png" width="200">
 
 # Aplicativo Android Rick and Morty
 
